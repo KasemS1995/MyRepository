@@ -1,8 +1,185 @@
-<html>
+<!DOCTYPE html>
+<html lang="th">
+
 <head>
-	<title> เว็บไซต์ของหนู </title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Forever with BTS - Greetings & Wishes</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+	<style>
+		body {
+			font-family: 'Prompt', sans-serif;
+		}
+
+		.bts-gradient {
+			background: linear-gradient(135deg, #7C3AED 0%, #C084FC 100%);
+		}
+	</style>
 </head>
-<body>
-	<div style="background-color: red; width: 120px; height: 120px;"></div>
+
+<body class="bg-purple-50 min-h-screen flex flex-col">
+
+	<!-- Navbar -->
+	<nav class="bg-purple-900 text-white p-4 shadow-lg">
+		<div class="container mx-auto flex justify-between items-center">
+			<h1 class="text-2xl font-bold tracking-wider">BTS APPRECIATION</h1>
+			<div class="space-x-4">
+				<a href="#" class="hover:text-purple-300 transition">Home</a>
+				<a href="#wishes" class="hover:text-purple-300 transition">Wishes</a>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<header class="bts-gradient text-white flex-grow flex items-center justify-center py-20 relative overflow-hidden">
+		<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30">
+		</div>
+		<div class="container mx-auto text-center relative z-10 px-4">
+			<h2 class="text-5xl md:text-7xl font-bold mb-6 animate-bounce">Hello, BTS!</h2>
+			<p class="text-xl md:text-2xl mb-8 font-light text-purple-100">
+				Sending our love and support to the 7 legends.
+			</p>
+			<div class="flex flex-wrap justify-center gap-4">
+				<span class="bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">RM</span>
+				<span class="bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">Jin</span>
+				<span class="bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">Suga</span>
+				<span class="bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">J-Hope</span>
+				<span class="bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">Jimin</span>
+				<span class="bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">V</span>
+				<span class="bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">Jungkook</span>
+			</div>
+		</div>
+	</header>
+
+	<!-- Content / Wishes Section -->
+	<section id="wishes" class="py-16 bg-white">
+		<div class="container mx-auto px-4">
+			<h3 class="text-3xl font-bold text-center text-purple-900 mb-12">Our Wishes</h3>
+			<div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+				<!-- Card 1 -->
+				<div
+					class="bg-purple-50 p-8 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 border border-purple-100">
+					<div class="text-4xl mb-4 text-purple-600">💜</div>
+					<h4 class="text-xl font-bold text-purple-800 mb-2">Health & Happiness</h4>
+					<p class="text-gray-600">Wishing all members good health and eternal happiness in everything they
+						do.</p>
+				</div>
+				<!-- Card 2 -->
+				<div
+					class="bg-purple-50 p-8 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 border border-purple-100">
+					<div class="text-4xl mb-4 text-purple-600">🎶</div>
+					<h4 class="text-xl font-bold text-purple-800 mb-2">Music & Passion</h4>
+					<p class="text-gray-600">May your music continue to inspire and heal the world. We are always
+						listening.</p>
+				</div>
+				<!-- Card 3 -->
+				<div
+					class="bg-purple-50 p-8 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 border border-purple-100">
+					<div class="text-4xl mb-4 text-purple-600">✨</div>
+					<h4 class="text-xl font-bold text-purple-800 mb-2">Forever Together</h4>
+					<p class="text-gray-600">Apobangpo! ARMY will always be by your side, waiting for 2025 and beyond.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Community Wishes Form Section -->
+	<section id="community-wishes" class="py-16 bg-purple-50 border-t border-purple-100">
+		<div class="container mx-auto px-4">
+			<h3 class="text-3xl font-bold text-center text-purple-900 mb-12">Send Your Love</h3>
+
+			<div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-lg border border-purple-100 mb-12">
+				<form id="wishForm" class="space-y-6">
+					<div>
+						<label for="name" class="block text-purple-700 font-medium mb-2">Your Name</label>
+						<input type="text" id="name" required
+							class="w-full px-4 py-3 rounded-lg border border-purple-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition"
+							placeholder="ARMY Name">
+					</div>
+					<div>
+						<label for="message" class="block text-purple-700 font-medium mb-2">Your Message</label>
+						<textarea id="message" required rows="4"
+							class="w-full px-4 py-3 rounded-lg border border-purple-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition"
+							placeholder="Write your message to BTS..."></textarea>
+					</div>
+					<button type="submit"
+						class="w-full bg-gradient-to-r from-purple-600 to-purple-500 text-white font-bold py-3 px-6 rounded-lg hover:shadow-lg hover:scale-[1.02] transition transform">
+						Send Love 💜
+					</button>
+				</form>
+			</div>
+
+			<div id="wishesContainer" class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+				<!-- Dynamic wishes will appear here -->
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="bg-purple-900 text-purple-200 py-8 text-center">
+		<p>&copy; 2026 Borahae. All rights reserved.</p>
+		<p class="text-sm mt-2 opacity-75">Created with 💜 for BTS</p>
+	</footer>
+
+	<script>
+		const wishForm = document.getElementById('wishForm');
+		const wishesContainer = document.getElementById('wishesContainer');
+
+		// Load wishes from localStorage
+		function loadWishes() {
+			const wishes = JSON.parse(localStorage.getItem('bts_wishes') || '[]');
+			wishesContainer.innerHTML = '';
+			wishes.forEach(wish => createWishCard(wish));
+		}
+
+		// Create wish card element
+		function createWishCard(wish) {
+			const card = document.createElement('div');
+			card.className = 'bg-white p-6 rounded-2xl shadow-sm border border-purple-100 transition hover:shadow-md';
+			card.innerHTML = `
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold mr-3 shrink-0">
+                        ${wish.name.charAt(0).toUpperCase()}
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-purple-900 break-all">${wish.name}</h4>
+                        <span class="text-xs text-purple-400">${new Date(wish.date).toLocaleDateString()}</span>
+                    </div>
+                </div>
+                <p class="text-gray-600 break-words whitespace-pre-wrap">${wish.message}</p>
+            `;
+			// Prepend to show newest first
+			wishesContainer.insertBefore(card, wishesContainer.firstChild);
+		}
+
+		// Save wish
+		wishForm.addEventListener('submit', (e) => {
+			e.preventDefault();
+			const name = document.getElementById('name').value;
+			const message = document.getElementById('message').value;
+
+			if (name && message) {
+				const newWish = {
+					id: Date.now(),
+					name,
+					message,
+					date: new Date().toISOString()
+				};
+
+				const wishes = JSON.parse(localStorage.getItem('bts_wishes') || '[]');
+				wishes.push(newWish);
+				localStorage.setItem('bts_wishes', JSON.stringify(wishes));
+
+				createWishCard(newWish);
+				wishForm.reset();
+			}
+		});
+
+		// Initialize
+		loadWishes();
+	</script>
 </body>
+
 </html>
